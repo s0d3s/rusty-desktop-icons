@@ -57,12 +57,15 @@ def complete_native(source: str, native: ModuleType) -> str:
     for node in reversed(tree.body):
         if isinstance(node, ast.FunctionDef) and node.name in {"_folder_flag_catalog", "_builtin_shader_catalog"}:
             windows_declarations.append(ast.unparse(node))
-            del lines[node.lineno - 1:node.end_lineno]
-            continue
-        if (isinstance(node, ast.FunctionDef) and node.name == "__getattr__") or (
+        elif not ((isinstance(node, ast.FunctionDef) and node.name == "__getattr__") or (
             isinstance(node, ast.ImportFrom) and node.module == "_typeshed"
-        ):
-            del lines[node.lineno - 1:node.end_lineno]
+        )):
+            continue
+        end = node.end_lineno
+        assert end is not None
+        while end < len(lines) and not lines[end].strip():
+            end += 1
+        del lines[node.lineno - 1:end]
     text = "\n".join(line.rstrip() for line in lines).strip() + "\n"
     pending = dict(missing)
     while pending:

@@ -263,7 +263,10 @@ def test_enum_stub_flattens_memberless_base() -> None:
         assert "Value = 'value'" in result
 
 
-def test_stub_completion_rejects_unknown_exports(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+@pytest.mark.parametrize("separator", ["", "\n", "\n\n"])
+def test_stub_completion_rejects_unknown_exports(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, separator: str,
+) -> None:
     script = Path(__file__).resolve().parents[3] / "scripts/generate-stubs.py"
     spec = importlib.util.spec_from_file_location("stub_generator", script)
     assert spec is not None and spec.loader is not None
@@ -276,14 +279,26 @@ def test_stub_completion_rejects_unknown_exports(monkeypatch: pytest.MonkeyPatch
     del native.Unhandled
     native.BaseFailure = type("BaseFailure", (Exception,), {"__doc__": "Base failure."})
     native.ChildFailure = type("ChildFailure", (native.BaseFailure,), {"__doc__": "Child failure."})
-    source = "from _typeshed import Incomplete\ndef __getattr__(name: str) -> Incomplete: ...\n"
+    prefix = (
+        "from _typeshed import Incomplete\n"
+        "def __getattr__(name: str) -> Incomplete: ...\n" + separator
+        + 'class Public:\n    """First paragraph.\n\n\n    Second paragraph."""\n'
+        + separator
+    )
+    suffix = "def init_logging() -> bool: ...\n"
+    source = prefix + suffix
     completed = generator.complete_native(source, native)
     assert "class ChildFailure(BaseFailure):" in completed
     assert "__getattr__" not in completed
+    assert "First paragraph.\n\n\n    Second paragraph." in completed
     assert generator.complete_native(source, native) == completed
     monkeypatch.setattr(generator, "sys", ModuleType("platform_for_test"))
     generator.sys.platform = "win32"
-    windows_source = source + "def _folder_flag_catalog() -> list[tuple[int, str, str, str]]: ...\ndef _builtin_shader_catalog() -> list[tuple[str, str]]: ...\n"
+    windows_source = (
+        prefix + "def _folder_flag_catalog() -> list[tuple[int, str, str, str]]: ...\n"
+        + separator + "def _builtin_shader_catalog() -> list[tuple[str, str]]: ...\n"
+        + separator + suffix
+    )
     windows_completed = generator.complete_native(windows_source, native)
     (tmp_path / "_rusty_desktop_icons.pyi").write_text(windows_completed, encoding="utf-8")
     monkeypatch.setattr(generator, "PACKAGE", tmp_path)

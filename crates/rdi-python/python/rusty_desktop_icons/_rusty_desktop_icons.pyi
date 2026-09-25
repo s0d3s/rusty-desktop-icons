@@ -932,7 +932,6 @@ class TimelineState:
     def __ne__(self, value: object, /) -> bool: ...
     def __repr__(self, /) -> str: ...
 
-
 def init_logging(level: str |None = None, target: "LogTarget | str" = "loguru") -> bool:
     """
     Route this library's diagnostics somewhere useful.
