@@ -39,7 +39,8 @@
 
 <div align="center">
   <a href="https://github.com">[DOCUMENTATION]</a>
-  <img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/silk_flow_solo.webp" height="100" width="960">
+  <br/>
+  <img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/silk_flow_solo.webp" height="140" width="960">
 </div>
 
 ## Prologue
