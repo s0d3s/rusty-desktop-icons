@@ -1,0 +1,7 @@
+# Dependencies are managed by the root pyproject.toml and uv.lock.
+# From the repository root (PowerShell, Python 3.12+):
+# $env:UV_PROJECT_ENVIRONMENT = Join-Path (Get-Location) '.tools-venv'
+# uv sync --locked --python 3.12 --only-group scripts
+# uv run --locked --only-group scripts python scripts/showcases/assemble-showcase.py --help
+# Rendering also needs a freshly built native wheel; see docs/contributing.md.
+# This file no longer installs dependencies with pip -r.

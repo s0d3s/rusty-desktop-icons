@@ -1,0 +1,18 @@
+[package]
+name = "rdi-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Platform-agnostic animation core for rusty-desktop-icons (curves, duration, spec, error, backend trait)."
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[dependencies]
+thiserror.workspace = true
+crossbeam-channel.workspace = true
+# Facade only — this crate must never install a subscriber.
+tracing.workspace = true

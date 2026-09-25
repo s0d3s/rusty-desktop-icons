@@ -1,0 +1,6 @@
+# Dependencies are managed by the root pyproject.toml and uv.lock.
+# From the repository root (PowerShell, Python 3.12+):
+# $env:UV_PROJECT_ENVIRONMENT = Join-Path (Get-Location) '.tools-venv'
+# uv sync --locked --python 3.12 --only-group docs
+# uv run --locked --only-group docs python -m sphinx -E -W -n -b dirhtml docs docs/_build/html
+# See docs/contributing.md. This file no longer installs dependencies with pip -r.

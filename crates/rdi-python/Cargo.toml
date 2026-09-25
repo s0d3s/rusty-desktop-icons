@@ -1,0 +1,33 @@
+[package]
+name = "rdi-python"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "PyO3 bindings for rusty-desktop-icons (built via maturin)."
+
+[lib]
+# Python import path: rusty_desktop_icons._rusty_desktop_icons
+# The leading underscore marks the compiled extension as an internal module
+# behind a Python-side re-export package (python/rusty_desktop_icons/__init__.py).
+name = "_rusty_desktop_icons"
+crate-type = ["cdylib"]
+
+[dependencies]
+rdi-core.workspace = true
+pyo3.workspace = true
+tracing.workspace = true
+# Leaf artifact: this is the crate that owns subscriber installation for
+# Python callers. See src/logging.rs.
+tracing-subscriber.workspace = true
+
+# Windows-only real backend.
+[target.'cfg(windows)'.dependencies]
+rdi-platform-windows.workspace = true
+
+# Fallback backend for every other platform so `cargo check` on Linux/macOS
+# still succeeds — every call returns `UnsupportedPlatform` at runtime.
+[target.'cfg(not(windows))'.dependencies]
+rdi-platform-stub.workspace = true

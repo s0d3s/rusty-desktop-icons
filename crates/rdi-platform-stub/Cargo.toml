@@ -1,0 +1,15 @@
+[package]
+name = "rdi-platform-stub"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Non-Windows placeholder backend that returns UnsupportedPlatform for every operation."
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[dependencies]
+rdi-core.workspace = true

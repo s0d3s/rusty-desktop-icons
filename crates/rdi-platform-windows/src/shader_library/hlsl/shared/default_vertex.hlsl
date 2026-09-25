@@ -1,0 +1,1 @@
+VertexOutput vertex(Instance instance, uint vertex_id : SV_VertexID) { return default_vertex(instance, vertex_id); }

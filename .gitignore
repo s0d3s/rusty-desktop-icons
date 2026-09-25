@@ -1,0 +1,43 @@
+# Rust build output
+/target
+**/target
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+/.tools-venv/
+.env
+.pytest_cache/
+.mypy_cache/
+/.docs-venv/
+/.test-venv/
+/docs/_build/
+/docs/_generated/
+/docs/python/api/
+/site/
+temp_python
+/*.md
+/*.ps1
+!/README.md
+/.github/*
+!/.github/workflows/
+
+# Maturin / wheel outputs
+*.whl
+*.pdb
+*.ilk
+*.exp
+crates/rdi-python/wheels/
+crates/rdi-python/*.pyd
+crates/rdi-python/*.so
+crates/rdi-python/*.dylib
+
+# The MCP server is developed as its own repository colocated in this
+# workspace for convenience. It has its own .git directory and is
+# published separately; keep it out of the main repo entirely.
+/rusty-desktop-icons-mcp/
+
+# Scratch space for throwaway experiments / demo scripts.
+/c_part/

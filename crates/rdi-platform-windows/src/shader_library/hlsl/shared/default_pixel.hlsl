@@ -1,0 +1,1 @@
+float4 pixel(VertexOutput input) : SV_Target { return default_pixel(input); }

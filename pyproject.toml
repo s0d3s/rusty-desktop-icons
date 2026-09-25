@@ -1,0 +1,35 @@
+[project]
+name = "rusty-desktop-icons-tools"
+version = "0.2.29"
+description = "Repository tooling for documentation and Python scripts."
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "maturin==1.15.0",
+    "mypy==2.3.1",
+    "pytest==9.1.1",
+]
+docs = [
+    { include-group = "dev" },
+    "Sphinx==9.1.0",
+    "myst-parser==5.1.0",
+    "furo==2025.12.19",
+    "sphinx-autoapi==3.8.1",
+]
+scripts = [
+    "Pillow==12.3.0",
+    "apng==0.3.4",
+    "imageio-ffmpeg==0.6.0",
+    "rich==15.0.0",
+    "numpy==2.5.3",
+    "scipy==1.18.1",
+    "scikit-image==0.26.0",
+]
+
+[tool.uv]
+package = false
+default-groups = ["docs", "scripts"]

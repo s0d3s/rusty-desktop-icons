@@ -1,0 +1,20 @@
+[package]
+name = "rdi-platform-windows"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Windows Shell/COM backend for rusty-desktop-icons (IFolderView2)."
+
+[dependencies]
+rdi-core.workspace = true
+# Facade only — this crate must never install a subscriber.
+tracing.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+windows.workspace = true
+# `windows-numerics` provides Vector2 / Vector3 / Matrix4x4 used by
+# Direct2D and DirectComposition APIs starting with windows 0.62.
+windows-numerics = "0.3.1"
