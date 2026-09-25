@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 	from sphinx.environment import BuildEnvironment
 
 ROOT = Path(__file__).resolve().parents[1]
-GITHUB_ASSETS_URL = "https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/main/assets_storage"
+GITHUB_ASSETS_URL = "https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage"
 project = "Rusty Desktop Icons"
 author = "s0d3s"
 copyright = f"{datetime.now(timezone.utc).year}, {author}"

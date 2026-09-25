@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets_storage/optimized/project_intro.gif" alt="Desktop icons gather into the Rusty Desktop Icons project name" width="800">
+<img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/project_intro.gif" alt="Desktop icons gather into the Rusty Desktop Icons project name" height="450" width="800">
 
 <h1>Rusty Desktop Icons</h1>
 
@@ -39,7 +39,7 @@
 
 <div align="center">
   <a href="https://github.com">[DOCUMENTATION]</a>
-  <img src="assets_storage/optimized/silk_flow_solo.webp" height="100" width="960">
+  <img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/silk_flow_solo.webp" height="100" width="960">
 </div>
 
 ## Prologue
@@ -77,9 +77,9 @@ movement, curves, and built-in shaders. It can be installed from source or downl
 | :---: | :---: | :---: |
 | [![animate_timeline Main tab with playback and duration controls][timeline-main]][timeline-main] | [![animate_timeline Curves tab with keyframe graph and JSON editor][timeline-curves]][timeline-curves] | [![animate_timeline Shader Editor tab with HLSL source][timeline-shader-editor]][timeline-shader-editor] |
 
-[timeline-main]: https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/main/assets_storage/animate_timeline_screenshots/animate_timeline_0_main.png
-[timeline-curves]: https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/main/assets_storage/animate_timeline_screenshots/animate_timeline_1_curves.png
-[timeline-shader-editor]: https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/main/assets_storage/animate_timeline_screenshots/animate_timeline_2_shader_editor.png
+[timeline-main]: https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/animate_timeline_screenshots/animate_timeline_0_main.png
+[timeline-curves]: https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/animate_timeline_screenshots/animate_timeline_1_curves.png
+[timeline-shader-editor]: https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/animate_timeline_screenshots/animate_timeline_2_shader_editor.png
 
 > [!NOTE] To better test result -> Disable **View > Auto arrange icons** in the desktop context menu first(Right Mouse Click on the Desktop)
 
@@ -626,25 +626,25 @@ its full-size version.**
 
 <table>
   <tr>
-  <td width="50%" align="center"><strong>Movement</strong><br><a href="assets_storage/optimized/movement.gif"><img src="assets_storage/optimized/movement_small.gif" alt="Curve-driven icon movement without shaders" width="404"></a></td>
-  <td width="50%" align="center"><strong>Glitch</strong><br><a href="assets_storage/optimized/glitch.gif"><img src="assets_storage/optimized/glitch_small.gif" alt="Icons moving with the built-in glitch effect" width="404"></a></td>
+  <td width="50%" align="center"><strong>Movement</strong><br><a href="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/movement.gif"><img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/movement_small.gif" alt="Curve-driven icon movement without shaders" width="404"></a></td>
+  <td width="50%" align="center"><strong>Glitch</strong><br><a href="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/glitch.gif"><img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/glitch_small.gif" alt="Icons moving with the built-in glitch effect" width="404"></a></td>
   </tr>
   <tr>
-  <td width="50%" align="center"><strong>Particle Vortex</strong><br><a href="assets_storage/optimized/particle_vortex.gif"><img src="assets_storage/optimized/particle_vortex_small.gif" alt="Icon artwork dispersing into a particle vortex and reforming" width="404"></a></td>
-  <td width="50%" align="center"><strong>Dust Transfer</strong><br><a href="assets_storage/optimized/dust_transfer.gif"><img src="assets_storage/optimized/dust_transfer_small.gif" alt="Icons dissolving from one side and reassembling at their destinations" width="404"></a></td>
+  <td width="50%" align="center"><strong>Particle Vortex</strong><br><a href="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/particle_vortex.gif"><img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/particle_vortex_small.gif" alt="Icon artwork dispersing into a particle vortex and reforming" width="404"></a></td>
+  <td width="50%" align="center"><strong>Dust Transfer</strong><br><a href="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/dust_transfer.gif"><img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/dust_transfer_small.gif" alt="Icons dissolving from one side and reassembling at their destinations" width="404"></a></td>
   </tr>
   <tr>
-  <td colspan="2" align="center"><strong>Silk Flow</strong><br><a href="assets_storage/optimized/silk_flow.gif"><img src="assets_storage/optimized/silk_flow_small.gif" alt="Icon colors flowing into translucent sheets and reforming" width="404"></a></td>
+  <td colspan="2" align="center"><strong>Silk Flow</strong><br><a href="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/silk_flow.gif"><img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/silk_flow_small.gif" alt="Icon colors flowing into translucent sheets and reforming" width="404"></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="assets_storage/optimized/effects_comparison.webp"><img src="assets_storage/optimized/effects_comparison.webp" alt="Movement, glitch, dust transfer and particle vortex side by side" width="616"></a>
+  <a href="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/effects_comparison.webp"><img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/effects_comparison.webp" alt="Movement, glitch, dust transfer and particle vortex side by side" width="616"></a>
 </p>
 
-The project-intro animation is the banner at the top. All README media currently
-lives under [assets_storage](assets_storage); a later move to a dedicated
-`storage` branch is planned. See [showcase export](docs/python/examples/showcases.md)
+The project-intro animation is the banner at the top. All README media lives on
+the dedicated [assets_storage branch](https://github.com/s0d3s/rusty-desktop-icons/tree/assets_storage/assets_storage).
+See [showcase export](docs/python/examples/showcases.md)
 to render your own scenes.
 
 ## Status & Limitations
