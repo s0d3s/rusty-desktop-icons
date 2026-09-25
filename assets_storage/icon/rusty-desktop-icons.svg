@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Rusty Desktop Icons</title>
+  <desc id="description">Three mint desktop tiles in a grid, with a rust-orange tile lifting away and a curved animation arrow on charcoal.</desc>
+  <defs>
+    <linearGradient id="surface" x1="64" y1="32" x2="448" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#293B39"/>
+      <stop offset="1" stop-color="#142321"/>
+    </linearGradient>
+    <linearGradient id="moving-tile" x1="300" y1="92" x2="404" y2="204" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB078"/>
+      <stop offset="1" stop-color="#E56A48"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#surface)"/>
+  <rect x="17" y="17" width="478" height="478" rx="107" fill="none" stroke="#FFFFFF" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="104" y="152" width="96" height="96" rx="20" fill="#E0F5ED"/>
+  <rect x="104" y="272" width="96" height="96" rx="20" fill="#BCE6D6"/>
+  <rect x="224" y="272" width="96" height="96" rx="20" fill="#81CDB4"/>
+  <path d="M240 230V212M240 184V168H256M284 168H302V184" fill="none" stroke="#A6D8C7" stroke-opacity=".35" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M274 410C362 400 421 331 398 254" fill="none" stroke="#F3A17B" stroke-width="18" stroke-linecap="round"/>
+  <path d="M373 274L396 246L422 269" fill="none" stroke="#F3A17B" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="rotate(12 350 148)">
+    <rect x="295" y="101" width="112" height="112" rx="24" fill="#0B1714" fill-opacity=".3"/>
+    <rect x="294" y="92" width="112" height="112" rx="24" fill="url(#moving-tile)"/>
+    <path d="M314 116H376" fill="none" stroke="#FFE1C6" stroke-opacity=".65" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
