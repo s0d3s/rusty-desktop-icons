@@ -38,7 +38,7 @@
 - [License](#license)
 
 <div align="center">
-  <a href="https://github.com">[DOCUMENTATION]</a>
+  <a href="https://s0d3s.github.io/rusty-desktop-icons/">[DOCUMENTATION]</a>
   <br/>
   <img src="https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/optimized/silk_flow_solo.webp" height="140" width="960">
 </div>
