@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "rusty-desktop-icons"
-version = "0.2.29"
+version = "0.2.30"
 description = "Rust-powered Windows desktop icon controller and animator."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -27,6 +27,7 @@ dependencies = [
 
 [project.urls]
 Repository = "https://github.com/s0d3s/rusty-desktop-icons"
+Documentation = "https://s0d3s.github.io/rusty-desktop-icons/"
 
 [tool.maturin]
 module-name = "rusty_desktop_icons._rusty_desktop_icons"

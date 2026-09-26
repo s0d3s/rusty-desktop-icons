@@ -971,7 +971,7 @@ wheels = [
 
 [[package]]
 name = "rusty-desktop-icons-tools"
-version = "0.2.29"
+version = "0.2.30"
 source = { virtual = "." }
 
 [package.dev-dependencies]

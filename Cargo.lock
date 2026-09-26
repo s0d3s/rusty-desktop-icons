@@ -890,7 +890,7 @@ dependencies = [
 
 [[package]]
 name = "rdi-core"
-version = "0.2.29"
+version = "0.2.30"
 dependencies = [
  "crossbeam-channel",
  "thiserror",
@@ -899,14 +899,14 @@ dependencies = [
 
 [[package]]
 name = "rdi-platform-stub"
-version = "0.2.29"
+version = "0.2.30"
 dependencies = [
  "rdi-core",
 ]
 
 [[package]]
 name = "rdi-platform-windows"
-version = "0.2.29"
+version = "0.2.30"
 dependencies = [
  "rdi-core",
  "tracing",
@@ -916,7 +916,7 @@ dependencies = [
 
 [[package]]
 name = "rdi-python"
-version = "0.2.29"
+version = "0.2.30"
 dependencies = [
  "pyo3",
  "rdi-core",
@@ -982,7 +982,7 @@ checksum = "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f"
 
 [[package]]
 name = "rusty-desktop-icons"
-version = "0.2.29"
+version = "0.2.30"
 dependencies = [
  "arboard",
  "crossterm",

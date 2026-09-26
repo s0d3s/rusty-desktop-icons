@@ -1,6 +1,6 @@
 [project]
 name = "rusty-desktop-icons-tools"
-version = "0.2.29"
+version = "0.2.30"
 description = "Repository tooling for documentation and Python scripts."
 license = "Apache-2.0"
 license-files = ["LICENSE"]

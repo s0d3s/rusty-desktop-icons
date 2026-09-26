@@ -8,7 +8,7 @@ members = [
 ]
 
 [workspace.package]
-version = "0.2.29"
+version = "0.2.30"
 edition = "2024"
 rust-version = "1.88"
 license = "Apache-2.0"
@@ -16,9 +16,9 @@ authors = ["s0d3s"]
 repository = "https://github.com/s0d3s/rusty-desktop-icons"
 
 [workspace.dependencies]
-rdi-core = { path = "crates/rdi-core", version = "0.2.29" }
-rdi-platform-windows = { path = "crates/rdi-platform-windows", version = "0.2.29" }
-rdi-platform-stub = { path = "crates/rdi-platform-stub", version = "0.2.29" }
+rdi-core = { path = "crates/rdi-core", version = "0.2.30" }
+rdi-platform-windows = { path = "crates/rdi-platform-windows", version = "0.2.30" }
+rdi-platform-stub = { path = "crates/rdi-platform-stub", version = "0.2.30" }
 
 thiserror = "2.0.21"
 crossbeam-channel = "0.5.17"
