@@ -20,6 +20,12 @@ release = tomllib.loads((ROOT / "Cargo.toml").read_text(encoding="utf-8"))["work
 extensions = ["myst_parser", "autoapi.extension", "sphinx.ext.intersphinx"]
 intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
 html_theme = "furo"
+html_static_path = ["_static"]
+html_css_files = ["particles.css"]
+html_js_files = [
+	("vendor/matter.min.js", {"defer": "defer"}),
+	("particles.js", {"defer": "defer"}),
+]
 html_theme_options = {
 	"footer_icons": [{
 		"name": "GitHub repository",

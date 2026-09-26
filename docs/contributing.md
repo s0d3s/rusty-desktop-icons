@@ -118,6 +118,61 @@ rules alone do not control archive contents.
 Install that wheel and run `python -m pytest crates/rdi-python/tests -v`
 to check the packaged public exports, methods, properties and annotations.
 
+## Documentation Background
+
+Furo loads `docs/_static/particles.css` and `docs/_static/particles.js` through
+`docs/conf.py`. With a docked right-hand contents panel, the canvas spans from
+the article's left edge to the main area's right edge. Squares fade smoothly
+to half opacity across the first 48px beyond the article. The docked contents
+panel is transparent, with its text and controls above the animation. The
+left navigation, footer and separate rustdoc reference remain unchanged.
+On narrow screens the canvas stays inside the article and the contents drawer
+remains opaque. Its viewport-sized buffer follows scrolling and stops at the
+article's bottom edge without allocating an image as tall as the document.
+Only expanded layouts isolate the main stacking context; article-only layouts
+isolate the article so mobile drawers stay above their click-to-close overlays.
+
+The script controls square tile density, size, drift, spin, cursor radius and
+impulse strength. CSS controls opacity; the neutral gray fill follows Furo's
+light/dark selection. A Motion checkbox remembers the reader's preference.
+Reduced-motion preferences hide the effect, and hidden/offscreen pages stop
+simulating. Touch scrolling does not trigger cursor repulsion.
+
+Squares are 4-9 CSS pixels with 1px rounded corners. Density is one square per
+7,800 square CSS pixels, clamped to 8-125 in the expanded wide-screen field
+and 8-95 otherwise: 125 in a 1197x900 expanded viewport, 85 in a 736x900
+article-only viewport, and 37 in a 343x844 mobile viewport. Formations use
+the full available field, with no collision boundary at the article edge.
+
+After each random 15-25 second drift interval, the simulation selects a desktop
+grid, geometric shape, local clusters or traveling wave. Geometric shapes
+randomly select a ring, square outline or static wave. Local clusters recruit
+one third of the squares into two small grids; other patterns select enough
+members to preserve target spacing. Remaining squares continue drifting.
+Velocity steering gathers members without teleporting or disabling collisions.
+Gathering time scales with travel distance, followed by a random 2-3 second
+hold and 2.5 second release. The traveling wave advances during its hold.
+Cursor proximity releases affected members for the rest of that cycle.
+Formation timers advance only with simulation steps, so pause, reduced motion
+and hidden/offscreen suspension do not skip ahead. Resizing starts a fresh
+drift interval and rebuilds targets for the available space.
+
+Matter.js 0.20.0 is vendored unmodified under `docs/_static/vendor/`, with its
+MIT license. The adapter lowers its internal resting-contact threshold so
+slow tiles bounce instead of settling; verify that behavior on upgrades.
+Run the deterministic physics checks with Node.js 22 or newer:
+
+```console
+node --test scripts/test-docs-particles.cjs
+```
+
+After a strict Sphinx build, verify desktop/mobile scrolling, light/dark,
+cursor avoidance, the Motion checkbox and reduced-motion settings in a browser.
+Verify each formation gathers, holds and releases without overriding cursor
+avoidance. Check the half-opacity right-side region and mobile contents drawer
+hit targets after resizing across the docked-panel breakpoint. The animation
+must remain behind selectable text and outside the footer.
+
 ## Publish a Release
 
 Publishing a GitHub Release triggers `.github/workflows/release.yml`. A tag push

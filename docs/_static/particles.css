@@ -1,0 +1,46 @@
+.main.rdi-particles,
+.article-container.rdi-particles {
+  position: relative;
+  isolation: isolate;
+}
+
+.main.rdi-particles-wide > .toc-drawer {
+  background: transparent;
+}
+
+.rdi-particle-layer {
+  position: absolute;
+  z-index: -1;
+  overflow: clip;
+  pointer-events: none;
+  contain: paint;
+}
+
+.rdi-particle-layer canvas {
+  position: absolute;
+  top: 0;
+  display: block;
+  opacity: 0.16;
+}
+
+.rdi-motion-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-inline-end: 0.5rem;
+  color: var(--color-foreground-secondary);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.rdi-motion-control input {
+  margin: 0;
+  accent-color: var(--color-brand-primary);
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  .rdi-particle-layer,
+  .rdi-motion-control {
+    display: none;
+  }
+}
