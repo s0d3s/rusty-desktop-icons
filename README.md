@@ -82,7 +82,8 @@ movement, curves, and built-in shaders. It can be installed from source or downl
 [timeline-curves]: https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/animate_timeline_screenshots/animate_timeline_1_curves.png
 [timeline-shader-editor]: https://raw.githubusercontent.com/s0d3s/rusty-desktop-icons/assets_storage/assets_storage/animate_timeline_screenshots/animate_timeline_2_shader_editor.png
 
-> [!NOTE] To better test result -> Disable **View > Auto arrange icons** in the desktop context menu first(Right Mouse Click on the Desktop)
+> [!NOTE]
+> To better test result -> Disable **View > Auto arrange icons** in the desktop context menu first(Right Mouse Click on the Desktop)
 
 <details>
 <summary><strong>Via crates.io or build</strong></summary>
